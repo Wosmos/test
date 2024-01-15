@@ -291,6 +291,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
+          SizedBox(
+            height: 20.h,
+          ),
           Row(
             children: [
               Padding(
@@ -310,7 +313,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           SizedBox(
-            height: 12.h,
+            height: 20.h,
           ),
           Padding(
             padding: EdgeInsets.only(
