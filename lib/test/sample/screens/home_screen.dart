@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:testone/test/constants/color.dart';
 import 'package:testone/test/sample/components/scroll_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -34,17 +35,43 @@ class _HomeScreenState extends State<HomeScreen> {
     return Container(
       width: double.infinity.w,
       height: double.infinity.h,
-      decoration: BoxDecoration(color: Color.fromRGBO(246, 246, 246, 1)),
+      decoration: BoxDecoration(color: scaffoldColor),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            'lib/test/assets/images/food1.png',
+          Container(
             width: double.infinity.w,
-            height: 358.sp,
-            fit: BoxFit.cover,
+            height: 358.h,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  'lib/test/assets/images/food1.png',
+                ),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Padding(
+              padding: EdgeInsets.only(top: 50.sp, left: 17.sp, right: 18.sp),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(
+                    Icons.arrow_back,
+                    color: white,
+                    size: 30.sp,
+                  ),
+                  Icon(
+                    Icons.favorite,
+                    color: Color.fromRGBO(255, 0, 0, 1),
+                    size: 30,
+                  ),
+                ],
+              ),
+            ),
           ),
           SizedBox(
-            height: 24.sp,
+            height: 24.h,
           ),
           Padding(
             padding: EdgeInsets.only(left: 18.sp, right: 18.sp),
@@ -64,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     SizedBox(
-                      height: 4.sp,
+                      height: 4.h,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -76,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           size: 13,
                         ),
                         SizedBox(
-                          width: 4.sp,
+                          width: 4.w,
                         ),
                         Text(
                           "5.9",
@@ -87,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         SizedBox(
-                          width: 4.sp,
+                          width: 4.w,
                         ),
                         Text(
                           "(",
@@ -114,22 +141,25 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         SizedBox(
-                          width: 5.sp,
+                          width: 5.w,
                         ),
                         Column(
                           children: [
-                            Text(
-                              "See Reviews",
-                              style: GoogleFonts.poppins(
-                                fontSize: 13
-                                    .sp, //its as design said 10 but i maybe adjut it at 13 or 14
-                                fontWeight: FontWeight.w400,
-                                color: Color.fromRGBO(226, 154, 79, 1),
+                            InkWell(
+                              onTap: () {},
+                              child: Text(
+                                "See Reviews",
+                                style: GoogleFonts.poppins(
+                                  fontSize: 13
+                                      .sp, //its as design said 10 but i maybe adjut it at 13 or 14
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromRGBO(226, 154, 79, 1),
+                                ),
                               ),
                             ),
                             Container(
-                              width: 81.sp,
-                              height: 1.sp,
+                              width: 81.w,
+                              height: 1.h,
                               decoration: BoxDecoration(
                                 color: Color.fromRGBO(226, 154, 79, 1),
                                 borderRadius: BorderRadius.circular(6.r),
@@ -140,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                     SizedBox(
-                      height: 8.sp,
+                      height: 8.h,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -154,14 +184,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         SizedBox(
-                          width: 7.sp,
+                          width: 7.w,
                         ),
                         Text(
                           "\$",
                           style: GoogleFonts.aoboshiOne(
                             fontSize: 10,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(226, 154, 79, 1),
+                            color: dollarColor,
                           ),
                         ),
                         Text(
@@ -169,12 +199,15 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: GoogleFonts.aoboshiOne(
                             fontSize: 10,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(226, 154, 79, 1),
+                            color: primarycolor,
                           ),
                         ),
                       ],
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: 13.h,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -187,7 +220,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: GoogleFonts.aoboshiOne(
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(226, 154, 79, 1),
+                            color: dollarColor,
                           ),
                         ),
                         Text(
@@ -195,7 +228,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: GoogleFonts.aoboshiOne(
                             fontSize: 18.sp,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(226, 154, 79, 1),
+                            color: primarycolor,
                           ),
                         ),
                       ],
@@ -209,45 +242,45 @@ class _HomeScreenState extends State<HomeScreen> {
                         GestureDetector(
                           onTap: decrementCounter,
                           child: Container(
-                            width: 30.sp,
-                            height: 30.sp,
+                            width: 30.w,
+                            height: 30.h,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50.r),
                               border: Border.all(
-                                color: Color.fromRGBO(226, 154, 79, 1),
+                                color: primarycolor,
                               ),
                             ),
                             child: Icon(
                               Icons.remove,
-                              color: Color.fromRGBO(226, 154, 79, 1),
+                              color: primarycolor,
                             ),
                           ),
                         ),
-                        SizedBox(width: 10.sp),
+                        SizedBox(width: 10.w),
                         Text(
                           counter.toString(),
                           style: GoogleFonts.aoboshiOne(
                             fontSize: 20.sp,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(226, 154, 79, 1),
+                            color: primarycolor,
                           ),
                         ),
-                        SizedBox(width: 10.sp),
+                        SizedBox(width: 10.w),
                         GestureDetector(
                           onTap: incrementCounter,
                           child: Container(
-                            width: 30.sp,
-                            height: 30.sp,
+                            width: 30.w,
+                            height: 30.h,
                             decoration: BoxDecoration(
-                              color: Color.fromRGBO(226, 154, 79, 1),
+                              color: primarycolor,
                               borderRadius: BorderRadius.circular(50.r),
                               border: Border.all(
-                                color: Color.fromRGBO(226, 154, 79, 1),
+                                color: primarycolor,
                               ),
                             ),
                             child: Icon(
                               Icons.add,
-                              color: Colors.white,
+                              color: white,
                             ),
                           ),
                         ),
@@ -263,81 +296,75 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: EdgeInsets.only(left: 18.sp, right: 42.sp),
                 child: SizedBox(
-                  width: 333.sp,
+                  width: 333.w,
                   child: Text(
                     "The marinated and battered chicken leg meat and breast meat were pressure fried and their physico-chemical qualities were compared to the conventional fried product (open pan deep fat frying).",
                     style: GoogleFonts.poppins(
-                      fontSize: 14,
+                      fontSize: 14.sp,
                       fontWeight: FontWeight.w400,
-                      color: const Color.fromRGBO(0, 0, 0, 0.5),
+                      color: lightGreyColor,
                     ),
                   ),
                 ),
               ),
             ],
           ),
+          SizedBox(
+            height: 12.h,
+          ),
           Padding(
             padding: EdgeInsets.only(
               left: 18.sp,
             ),
-            child: Row(
-              children: [
-                Text(
-                  "Choice of add on",
-                  style: GoogleFonts.poppins(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
+            child: Text(
+              "Choice of add on",
+              style: GoogleFonts.poppins(
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w500,
+                color: black,
+              ),
             ),
           ),
           SizedBox(
-            height: 15.sp,
+            height: 15.h,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 18.sp),
-            child: Container(
-              height: 120.sp, // Adjust the height as needed
-              child: ListView.builder(
+              padding: EdgeInsets.only(left: 18.sp),
+              child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                itemCount: 5, // Number of cards
-                itemBuilder: (context, index) {
-                  return Row(
-                    children: [
-                      ScrollCard(
-                        imagePath: 'lib/test/assets/images/scrollChild1.png',
-                      ),
-                      SizedBox(
-                        width: 17.sp,
-                      ),
-                    ],
-                  );
-                },
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 15.sp,
-          ),
-          InkWell(
-            child: Container(
-              width: 357.w,
-              height: 60.h,
-              decoration: BoxDecoration(
-                color: const Color.fromRGBO(226, 154, 79, 1),
-                borderRadius: BorderRadius.circular(
-                  20.sp,
+                child: Row(
+                  children: List.generate(
+                    growable: true,
+                    6,
+                    (index) => ScrollCard(
+                      imagePath: 'lib/test/assets/images/scrollChild1.png',
+                    ),
+                  ),
                 ),
-              ),
-              child: Center(
-                child: Text(
-                  "Add to Cart",
-                  style: GoogleFonts.roboto(
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white),
+              )),
+          SizedBox(
+            // height: 15.h,
+            height: 21.h,
+          ),
+          Center(
+            child: InkWell(
+              child: Container(
+                width: 357.w,
+                height: 60.h,
+                decoration: BoxDecoration(
+                  color: primarycolor,
+                  borderRadius: BorderRadius.circular(
+                    20.sp,
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    "Add to Cart",
+                    style: GoogleFonts.roboto(
+                        fontSize: 20.sp,
+                        fontWeight: FontWeight.w400,
+                        color: white),
+                  ),
                 ),
               ),
             ),

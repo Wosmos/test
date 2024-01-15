@@ -13,8 +13,9 @@ class _ScrollCardState extends State<ScrollCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 90.sp,
-      height: 95.sp,
+      width: 90.w,
+      height: 95.h,
+      margin: EdgeInsets.only(right: 17.sp),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.r),
       ),
@@ -22,8 +23,8 @@ class _ScrollCardState extends State<ScrollCard> {
         borderRadius: BorderRadius.circular(10.r),
         child: Image.asset(
           widget.imagePath,
-          width: double.infinity,
-          height: double.infinity,
+          width: double.infinity.w,
+          height: double.infinity.h,
           fit: BoxFit.cover,
         ),
       ),

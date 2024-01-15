@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:testone/test/constants/color.dart';
 
 class OrderOverviewPage extends StatefulWidget {
   const OrderOverviewPage({super.key});
@@ -15,14 +16,14 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(246, 246, 246, 1),
+      backgroundColor: scaffoldColor,
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(246, 246, 246, 1),
-        elevation: 0,
+        backgroundColor: scaffoldColor,
+        elevation: 0.sp,
         leading: Icon(
           Icons.arrow_back,
-          color: Colors.black,
-          size: 20,
+          color: black,
+          size: 20.sp,
         ),
       ),
       body: Column(
@@ -34,19 +35,19 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
                 style: GoogleFonts.aoboshiOne(
                   fontSize: 22.sp,
                   fontWeight: FontWeight.w400,
-                  color: Colors.black,
+                  color: black,
                 ),
               ),
             ],
           ),
           SizedBox(
-            height: 8.sp,
+            height: 8.h,
           ),
           Container(
-            width: 360.sp,
-            height: 1.sp,
+            width: 360.w,
+            height: 1.h,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(0, 0, 0, 0.05),
+              color: lightGreyColor,
               borderRadius: BorderRadius.circular(6.r),
             ),
           ),
@@ -57,9 +58,9 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
                   Text(
                     "5.9",
                     style: GoogleFonts.poppins(
-                      fontSize: 22,
+                      fontSize: 22.sp,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black,
+                      color: black,
                     ),
                   ),
                   Row(
@@ -69,7 +70,7 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
                         style: GoogleFonts.poppins(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
-                          color: const Color.fromRGBO(0, 0, 0, 0.50),
+                          color: lightGreyColor,
                         ),
                       ),
                       Text(
@@ -77,7 +78,7 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
                         style: GoogleFonts.poppins(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
-                          color: const Color.fromRGBO(0, 0, 0, 0.50),
+                          color: lightGreyColor,
                         ),
                       ),
                       Text(
@@ -85,18 +86,18 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
                         style: GoogleFonts.poppins(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
-                          color: const Color.fromRGBO(0, 0, 0, 0.50),
+                          color: lightGreyColor,
                         ),
                       ),
                       SizedBox(
-                        width: 5.sp,
+                        width: 5.w,
                       ),
                       Text(
                         "reviews",
                         style: GoogleFonts.poppins(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
-                          color: const Color.fromRGBO(0, 0, 0, 0.50),
+                          color: lightGreyColor,
                         ),
                       ),
                       Text(
@@ -104,7 +105,7 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
                         style: GoogleFonts.poppins(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
-                          color: const Color.fromRGBO(0, 0, 0, 0.50),
+                          color: lightGreyColor,
                         ),
                       ),
                     ],
