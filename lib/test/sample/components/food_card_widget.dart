@@ -1,6 +1,6 @@
 // ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'dart:html';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -49,8 +49,6 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
         ),
         // parent row[having all the childs in form of columns]
         child: Row(
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
               width: 8.sp,
@@ -63,20 +61,13 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
               height: 80.sp,
               fit: BoxFit.cover,
             ),
-
             SizedBox(
               width: 12.sp,
             ),
 
             Column(
-              // crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
-              // crossAxisAlignment: CrossAxisAlignment.end,
-              // crossAxisAlignment: CrossAxisAlignment.center,
-              // crossAxisAlignment: CrossAxisAlignment.stretch,
-              // crossAxisAlignment: CrossAxisAlignment.baseline,
-
               children: [
                 Text(
                   widget.heading,
