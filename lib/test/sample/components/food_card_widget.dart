@@ -1,7 +1,5 @@
 // ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -41,8 +39,8 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
     return Padding(
       padding: EdgeInsets.only(left: 10, right: 10),
       child: Container(
-        width: 357.sp,
-        height: 95.sp,
+        width: 357.w,
+        height: 95.h,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15.r),
@@ -51,20 +49,19 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
         child: Row(
           children: [
             SizedBox(
-              width: 8.sp,
+              width: 8.w,
             ),
             // this contain image
 
             Image.asset(
               widget.img,
-              width: 100.sp,
-              height: 80.sp,
+              width: 100.w,
+              height: 80.h,
               fit: BoxFit.cover,
             ),
             SizedBox(
-              width: 12.sp,
+              width: 12.w,
             ),
-
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,7 +69,7 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
                 Text(
                   widget.heading,
                   style: GoogleFonts.aoboshiOne(
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -82,47 +79,47 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
                     Text(
                       widget.item,
                       style: GoogleFonts.poppins(
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           color: const Color.fromRGBO(0, 0, 0, 0.3)),
                     ),
                     SizedBox(
-                      width: 5.sp,
+                      width: 5.w,
                     ),
                     Text(
                       "items",
                       style: GoogleFonts.poppins(
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           color: const Color.fromRGBO(0, 0, 0, 0.3)),
                     ),
                     SizedBox(
-                      width: 10,
+                      width: 10.w,
                     ),
                     Text(
                       "|",
                       style: GoogleFonts.poppins(
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           color: const Color.fromRGBO(0, 0, 0, 0.3)),
                     ),
                     SizedBox(
-                      width: 10,
+                      width: 10.w,
                     ),
                     Text(
                       widget.distance,
                       style: GoogleFonts.poppins(
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           color: const Color.fromRGBO(0, 0, 0, 0.3)),
                     ),
                     SizedBox(
-                      width: 5.sp,
+                      width: 5.w,
                     ),
                     Text(
                       "km",
                       style: GoogleFonts.poppins(
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           color: const Color.fromRGBO(0, 0, 0, 0.3)),
                     ),
@@ -133,7 +130,7 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
                     Text(
                       "\$",
                       style: GoogleFonts.aoboshiOne(
-                        fontSize: 10,
+                        fontSize: 10.sp,
                         fontWeight: FontWeight.w400,
                         color: const Color.fromRGBO(27, 172, 75, 1),
                       ),
@@ -141,7 +138,7 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
                     Text(
                       widget.prize,
                       style: GoogleFonts.aoboshiOne(
-                        fontSize: 14,
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
                         color: const Color.fromRGBO(27, 172, 75, 1),
                       ),
@@ -156,7 +153,7 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
               children: [
                 Image.asset("lib/test/assets/images/cross.png"),
                 SizedBox(
-                  height: 28,
+                  height: 28.h,
                 ),
                 ElevatedButton(
                   onPressed: () {}, // Specify the onPressed callback
@@ -174,7 +171,7 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
                       style: GoogleFonts.aoboshiOne(
                         color: widget.btnTextColor,
                         fontWeight: FontWeight.w400,
-                        fontSize: 10,
+                        fontSize: 10.sp,
                       ),
                     ),
                   ),
