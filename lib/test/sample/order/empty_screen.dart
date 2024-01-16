@@ -43,7 +43,7 @@ class EmptyScreen extends StatelessWidget {
             textAlign: TextAlign.center,
             style: GoogleFonts.poppins(
                 fontSize: 14.sp,
-                color: Colors.grey.shade600,
+                color: const Color.fromRGBO(117, 117, 117, 1),
                 fontWeight: FontWeight.w400),
           ),
           const Spacer(),

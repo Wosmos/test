@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:givestarreviews/givestarreviews.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:testone/test/constants/color.dart';
 
@@ -43,13 +44,17 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
           SizedBox(
             height: 8.h,
           ),
+          
           Container(
             width: 360.w,
             height: 1.h,
             decoration: BoxDecoration(
-              color: lightGreyColor,
+              color: const Color.fromRGBO(0, 0, 0, 0.05),
               borderRadius: BorderRadius.circular(6.r),
             ),
+          ),
+          StarRating(
+            size: 45.sp,
           ),
           Row(
             children: [
@@ -63,6 +68,8 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
                       color: black,
                     ),
                   ),
+                  //starts
+
                   Row(
                     children: [
                       Text(

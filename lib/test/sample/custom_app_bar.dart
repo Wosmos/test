@@ -30,13 +30,14 @@ class _CustomAppBarState extends State<CustomAppBar> {
           ),
         ],
         leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(
-              Icons.arrow_back_sharp,
-              size: 30.sp,
-            )),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back_sharp,
+            size: 30.sp,
+          ),
+        ),
         title: Text(
           widget.title,
           style: GoogleFonts.aoboshiOne(

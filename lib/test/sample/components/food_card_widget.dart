@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:testone/test/constants/color.dart';
 
 class FoodCardWidget extends StatefulWidget {
   final String img;
@@ -42,7 +43,7 @@ class _FoodCardWidgetState extends State<FoodCardWidget> {
         width: 357.w,
         height: 95.h,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: white,
           borderRadius: BorderRadius.circular(15.r),
         ),
         // parent row[having all the childs in form of columns]

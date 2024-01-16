@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:testone/test/sample/components/food_card_widget.dart';
+import 'package:testone/test/sample/components/transaction_history_card.dart';
 import 'package:testone/test/sample/custom_app_bar.dart';
 import 'package:testone/test/sample/order/cancle/cancle.dart';
 import 'package:testone/test/sample/order/recieve/recieve.dart';
@@ -9,6 +10,9 @@ import 'package:testone/test/sample/order/ship/ship.dart';
 import 'package:testone/test/sample/screens/home_screen.dart';
 import 'package:testone/test/sample/screens/order_overview_page.dart';
 import 'package:testone/test/sample/screens/order_page_screen.dart';
+import 'package:testone/test/sample/screens/wallet_screen_one.dart';
+import 'package:testone/test/sample/screens/wallet_screen_three.dart';
+import 'package:testone/test/sample/screens/wallet_screen_two.dart';
 // import 'package:testone/test/sample/order/cancle/cancle.dart';
 // import 'package:testone/test/sample/order/empty_screen.dart';
 // import 'package:testone/test/sample/order/recieve/recieve.dart';
@@ -26,6 +30,6 @@ class _OrderScreenState extends State<OrderScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         // appBar: CustomAppBar(title: "Orders"),
-        body: OrderPageScreen());
+        body: HomeScreen());
   }
 }

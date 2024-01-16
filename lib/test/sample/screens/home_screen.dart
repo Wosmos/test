@@ -32,11 +32,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity.w,
-      height: double.infinity.h,
-      decoration: BoxDecoration(color: scaffoldColor),
-      child: Column(
+    return Scaffold(
+      backgroundColor: scaffoldColor,
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
@@ -87,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: GoogleFonts.aoboshiOne(
                         fontSize: 22.sp,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black,
+                        color: black,
                       ),
                     ),
                     SizedBox(
@@ -110,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: GoogleFonts.poppins(
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
-                            color: Colors.black,
+                            color: black,
                           ),
                         ),
                         SizedBox(
@@ -121,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: GoogleFonts.poppins(
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
-                            color: const Color.fromRGBO(0, 0, 0, 0.50),
+                            color: lightGreyColor,
                           ),
                         ),
                         Text(
@@ -129,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: GoogleFonts.poppins(
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
-                            color: const Color.fromRGBO(0, 0, 0, 0.50),
+                            color: lightGreyColor,
                           ),
                         ),
                         Text(
@@ -137,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: GoogleFonts.poppins(
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
-                            color: const Color.fromRGBO(0, 0, 0, 0.50),
+                            color: lightGreyColor,
                           ),
                         ),
                         SizedBox(
@@ -153,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   fontSize: 13
                                       .sp, //its as design said 10 but i maybe adjut it at 13 or 14
                                   fontWeight: FontWeight.w400,
-                                  color: Color.fromRGBO(226, 154, 79, 1),
+                                  color: primarycolor,
                                 ),
                               ),
                             ),
@@ -161,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: 81.w,
                               height: 1.h,
                               decoration: BoxDecoration(
-                                color: Color.fromRGBO(226, 154, 79, 1),
+                                color: primarycolor,
                                 borderRadius: BorderRadius.circular(6.r),
                               ),
                             ),
@@ -180,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: GoogleFonts.poppins(
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(0, 0, 0, 0.50),
+                            color: lightGreyColor,
                           ),
                         ),
                         SizedBox(
