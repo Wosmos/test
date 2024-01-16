@@ -30,6 +30,13 @@ class _OrderScreenState extends State<OrderScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         // appBar: CustomAppBar(title: "Orders"),
+<<<<<<< HEAD
         body: HomeScreen());
+=======
+
+        body: HomeScreen());
+
+    // body: OrderPageScreen());
+>>>>>>> aeb5b7662e95b543db4b2a34d65bd6f3cd51c240
   }
 }
