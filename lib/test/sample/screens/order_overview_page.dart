@@ -56,6 +56,7 @@ class _OrderOverviewPageState extends State<OrderOverviewPage> {
           StarRating(
             size: 45.sp,
           ),
+          
           Row(
             children: [
               Column(

@@ -52,6 +52,7 @@ class _WalletScreenTwoState extends State<WalletScreenTwo> {
               height: 9.w,
             ),
             TransactionHistoryCard(),
+            
           ],
         ),
       ),
